@@ -1,10 +1,10 @@
 function extrairTextoPDF() {
-  var folderId = "Nome do arquivo"; // Substitua pelo ID da pasta
+  var folderId = "ID da pasta onde estão os arquivos pdf"; // Substitua pelo ID da pasta
   var folder = DriveApp.getFolderById(folderId);
   var files = folder.getFilesByType("application/pdf");
   
   var ss = SpreadsheetApp.getActiveSpreadsheet();
-  var sheet = ss.getSheetByName("BD_DIFAL");
+  var sheet = ss.getSheetByName("BD_DIFAL"); // Nome da aba onde será imputado as informações
 
   sheet.getRange('A:D').clearContent(); // Limpa todo o conteúdo da aba BD_DIFAL
   
